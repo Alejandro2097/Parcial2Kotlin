@@ -1,7 +1,9 @@
 package com.example.parcial2
 
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.parcial2.adapter.StudentAdapter
 import com.example.parcial2.data.Student
@@ -43,7 +45,21 @@ class MainActivity : AppCompatActivity() {
         adapter.notifyDataSetChanged()
     }
     private fun deleteStudent(product: Student) {
-        adapter.deleteStudent(product)
-        adapter.notifyDataSetChanged()
+        val builder = AlertDialog.Builder(this@MainActivity)
+        builder.setMessage("¿Esta seguro que desea eliminar al estudiante?")
+                .setPositiveButton("Aceptar",
+                        DialogInterface.OnClickListener { dialog, id ->
+                            // FIRE ZE MISSILES!
+                            adapter.deleteStudent(product)
+                            adapter.notifyDataSetChanged()
+                        })
+                .setNegativeButton("Cancelar",
+                        DialogInterface.OnClickListener { dialog, id ->
+                            // User cancelled the dialog
+                        })
+        // Create the AlertDialog object and return it
+        builder.create()
+        builder.show()
+
     }
 }
