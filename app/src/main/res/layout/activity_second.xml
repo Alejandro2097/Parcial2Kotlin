@@ -14,11 +14,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guia4"
+        app:layout_constraintBottom_toTopOf="@id/guia8"
         />
 
     <Button
         android:id="@+id/btn_imagen"
-        android:textSize="17sp"
+        android:textSize="13sp"
         android:textStyle="normal"
         android:textAlignment="center"
         android:layout_height="0dp"
@@ -32,7 +33,7 @@
 
     <Button
         android:id="@+id/btn_hora"
-        android:textSize="17sp"
+        android:textSize="13sp"
         android:textStyle="normal"
         android:textAlignment="center"
         android:layout_height="0dp"
@@ -43,6 +44,21 @@
         app:layout_constraintEnd_toEndOf="@id/guia6"
         app:layout_constraintBottom_toTopOf="@id/guia1"
         app:layout_constraintTop_toBottomOf="@id/guia5" />
+
+    <Button
+        android:id="@+id/btn_atras"
+        android:textSize="17sp"
+        android:textStyle="normal"
+        android:textAlignment="center"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:textColor="#FFFFFF"
+        android:text="Atras"
+        app:layout_constraintTop_toTopOf="@id/guia9"
+        app:layout_constraintBottom_toBottomOf="@id/guia10"
+        app:layout_constraintStart_toStartOf="@id/guia2"
+        app:layout_constraintEnd_toStartOf="@id/guia3"
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guia1"
@@ -96,7 +112,22 @@
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guia8"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.95"
+        app:layout_constraintGuide_percent="0.8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guia9"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guia10"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

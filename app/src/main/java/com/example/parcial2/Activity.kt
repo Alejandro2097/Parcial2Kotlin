@@ -3,25 +3,28 @@ package com.example.parcial2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_second.*
 
 class Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        var button1 = findViewById<Button>(R.id.btn_hora)
-        var button2 = findViewById<Button>(R.id.btn_imagen)
-
-        button1.setOnClickListener{
+        btn_hora.setOnClickListener{
             mostrarFragmentoHora()
 
         }
 
-        button2.setOnClickListener{
+        btn_imagen.setOnClickListener{
             mostrarFragmentoImagen()
 
         }
+
+        btn_atras.setOnClickListener{
+            finish()
+        }
+
     }
 
     private fun mostrarFragmentoHora(){

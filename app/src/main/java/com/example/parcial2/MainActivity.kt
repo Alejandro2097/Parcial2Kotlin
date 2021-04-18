@@ -1,8 +1,10 @@
 package com.example.parcial2
 
 import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.parcial2.adapter.StudentAdapter
@@ -26,6 +28,10 @@ class MainActivity : AppCompatActivity() {
                 addStudent(name, last, cc, tel)
             }
             dialog.show()
+        }
+        secondActButton.setOnClickListener(){
+            val intent = Intent(this, Activity::class.java)
+            startActivity(intent)
         }
     }
     private fun setupList() {
@@ -62,4 +68,5 @@ class MainActivity : AppCompatActivity() {
         builder.show()
 
     }
+
 }
