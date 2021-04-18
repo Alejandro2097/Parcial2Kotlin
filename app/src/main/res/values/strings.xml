@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Parcial 2</string>
+    <string name="add_product">Agregar</string>
+    <string name="dialog_title">Agregar Estudiante</string>
+    <string name="dialog_edit_name">Nombres</string>
+    <string name="dialog_edit_lastname">Apellidos</string>
+    <string name="dialog_edit_cc">Cédula</string>
+    <string name="dialog_edit_tel">Número de telefono</string>
+    <string name="dialog_save">Guardar</string>
+</resources>
